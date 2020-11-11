@@ -1,6 +1,6 @@
 ![Image description](https://i1.faceprep.in/ProGrad/prograd-logo.png)
 
-# PROGRAD PROJECT BUILDER | NODE | MONGOOSE - SUB DOCUMENT | QUIZ STAGE 4
+# PROGRAD PROJECT BUILDER | NODE | MONGOOSE - SUBDOCUMENT | QUIZ STAGE 4
 
 ## Learning Goals
 
@@ -35,56 +35,21 @@ Your task in this iteration is to create a
 - An account in `Mongo Atlas`
 - connection between node and atlas using mongoose.
 
-### PROGRESSION 2 | CREATE MODEL CLASSES
-Reuse the model classes created in the day-3 project builder
-- Questions
-- Options
-- Answers
+### PROGRESSION 2 | REUSE AND MODIFY MODEL CLASSES
+Reuse the model classes created in the day-3 project builder and modify the classes so that 
+- Questions schema should contain the option and answers as the subdocument
+    - Options
+    - Answers
 
-### PROGRESSION 3 | 
+### PROGRESSION 3 | CREATE AN ENDPOINT TO MAP THE SCHEMAS
 
-Add the code necessary to create a Web API and implement the following _endpoints_:
+The question schema should embed the options and answers. Use options id and answers id to map these two with the corresponding question. Create your own api end points
 
-| Method | URL            | Description                                                                                            |
-| ------ | -------------- | ------------------------------------------------------------------------------------------------------ |
-| POST   | /api/questions     | Creates a user using the information sent inside the `request body`.                                   |
-| GET    | /api/questions     | Returns an array users.                                                                                |
-| GET    | /api/questions/:id | Returns the user object with the specified `id`.                                                       |
-| DELETE | /api/questions/:id | Removes the user with the specified `id` and returns the deleted user.                                 |
-| PUT    | /api/questions/:id | Updates the user with the specified `id` using data from the `request body`. Returns the modified user |
+### PROGRESSION 4 | DISPLAY ALL DETAILS USING SINGLE ENDPOINT
+In this progression, display all the questions, options and corresponding answers together by creating a end point.
 
-
-### PROGRESSION 4 | OPTIONS ENDPOINTS
-
-Add the code necessary to create a Web API and implement the following _endpoints_:
-
-| Method | URL            | Description                                                                                            |
-| ------ | -------------- | ------------------------------------------------------------------------------------------------------ |
-| POST   | /api/options     | Creates a user using the information sent inside the `request body`.                                   |
-| GET    | /api/options     | Returns an array users.                                                                                |
-| GET    | /api/options/:id | Returns the user object with the specified `id`.                                                       |
-| DELETE | /api/options/:id | Removes the user with the specified `id` and returns the deleted user.                                 |
-| PUT    | /api/options/:id | Updates the user with the specified `id` using data from the `request body`. Returns the modified user |
-
-### PROGRESSION 5 | ANSWERS ENDPOINTS
-
-Add the code necessary to create a Web API and implement the following _endpoints_:
-
-| Method | URL            | Description                                                                                            |
-| ------ | -------------- | ------------------------------------------------------------------------------------------------------ |
-| POST   | /api/answers     | Creates a user using the information sent inside the `request body`.                                   |
-| GET    | /api/answers     | Returns an array users.                                                                                |
-| GET    | /api/answers/:id | Returns the user object with the specified `id`.                                                       |
-| DELETE | /api/answers/:id | Removes the user with the specified `id` and returns the deleted user.                                 |
-| PUT    | /api/answers/:id | Updates the user with the specified `id` using data from the `request body`. Returns the modified user |
-
-
-### PROGRESSION 6: BONUS
-
-To work on the stretch problems you'll need to enable the `cors` middleware. Follow these steps:
-
-- add the `cors` npm module: `npm i cors`.
-- add `server.use(cors())` after `server.use(express.json())`.
+### BONUS | POPULATE THE DATA
+Try to populate the values instead of displaying as an object id. Use  `populate` method in mongoose to achieve this.
 
 ## Submission
 
