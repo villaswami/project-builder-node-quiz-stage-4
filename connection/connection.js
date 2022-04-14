@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 //connect to cluster
-mongoose.connect('mongodb+srv://System:root@cluster0.8fc7b.mongodb.net/Quiz?retryWrites=true&w=majority', 
+mongoose.connect('mongodb+srv://villa:villa@cluster0.8fc7b.mongodb.net/villa?retryWrites=true&w=majority', 
 {
     useNewUrlParser :true,
     useUnifiedTopology : true,
